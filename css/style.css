@@ -1,101 +1,111 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: monospace, sans-serif;
-}
-
+/* fundo da página */
 body {
-    background-color: #f4f4f4;
-    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, pink, #ffffff);
+    color: #333;
 }
 
-header {
-    background-color: #a997f7;
-    color: white;
-    padding: 15px;
-    font-size: 14px;
-}
-
+/* centralização do container e outras coisas ai */
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    margin: 20px auto;
-    text-align: left;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-h2 {
+
+.container h2 {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-label {
-    font-weight: bold;
+/* espaçamento uniforme das coisas */
+form label {
     display: block;
-    margin-top: 10px;
-}
-
-input, textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #57c4a3;
-    border-radius: 4px;
-}
-
-fieldset {
-    border: none;
-    margin-top: 10px;
-}
-
-legend {
+    margin-top: 15px;
     font-weight: bold;
 }
 
-/* Gênero em linha */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* caixinhas genero */
 .genero-container {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     margin-top: 5px;
 }
 
 .genero-container label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    font-weight: normal;
 }
 
+/* area texrto */
+textarea {
+    resize: vertical;
+}
+
+/* ---Botões----- */
 .botoes {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
-}
-
-textarea {
-    resize: vertical; /* Permite redimensionar apenas na vertical */
-}
-
-
-button {
-    background-color: #a997f7;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 48%;
-}
-
-button:hover {
-    background-color: #455aa0;
-}
-
-footer {
-    background-color: #67c2ab;
-    color: white;
-    padding: 10px;
     margin-top: 20px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    width: 48%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* --botão enviar----- */
+button[type="submit"] {
+    background-color: #de3163;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #a91e14;
+}
+
+/* --botão limpar--- */
+button[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+button[type="reset"]:hover {
+    background-color: #cfcfcf;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
 }
